@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Сайт-визитка Мирзиеда</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        /* 🌈 Красивый переливающийся фон */
+        background: linear-gradient(120deg, #f6d365, #fda085, #a1c4fd, #c2e9fb);
+        background-size: 400% 400%;
+        animation: gradientBG 15s ease infinite;
+        color: #333;
+    }
+
+    @keyframes gradientBG {
+        0% {background-position: 0% 50%;}
+        50% {background-position: 100% 50%;}
+        100% {background-position: 0% 50%;}
+    }
+
+    h1, h2 {
+        text-align: center;
+        color: #fff;
+        text-shadow: 3px 3px 10px #000;
+        opacity: 0;
+        animation: fadeIn 2s ease forwards;
+    }
+
+    h1 {
+        margin-top: 25px;
+        font-size: 2.5em;
+        animation-delay: 0.5s;
+    }
+
+    h2 {
+        font-size: 1.3em;
+        margin-bottom: 30px;
+        animation-delay: 1.5s;
+    }
+
+    .about-me {
+        margin: 20px auto;
+        width: 90%;
+        max-width: 900px;
+    }
+
+    /* ✨ Плавное появление каждого предложения */
+    .about-me p {
+        font-size: 1.1em;
+        margin: 10px 0;
+        padding: 10px;
+        border-radius: 10px;
+        color: white;
+        opacity: 0;
+        transform: translateY(30px);
+        animation: fadeUp 1s ease forwards;
+    }
+
+    /* Каждому пункту — своя задержка */
+    .about-me p:nth-child(1) { animation-delay: 0.5s; }
+    .about-me p:nth-child(2) { animation-delay: 0.8s; }
+    .about-me p:nth-child(3) { animation-delay: 1.1s; }
+    .about-me p:nth-child(4) { animation-delay: 1.4s; }
+    .about-me p:nth-child(5) { animation-delay: 1.7s; }
+    .about-me p:nth-child(6) { animation-delay: 2.0s; }
+    .about-me p:nth-child(7) { animation-delay: 2.3s; }
+    .about-me p:nth-child(8) { animation-delay: 2.6s; }
+    .about-me p:nth-child(9) { animation-delay: 2.9s; }
+    .about-me p:nth-child(10) { animation-delay: 3.2s; }
+
+    @keyframes fadeUp {
+        from {opacity: 0; transform: translateY(30px);}
+        to {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+
+    /* Галерея картинок */
+    .images {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin: 40px 0;
+        animation: fadeIn 2s ease forwards;
+        animation-delay: 3.5s;
+        opacity: 0;
+    }
+
+    .images img {
+        width: 220px;
+        height: 140px;
+        object-fit: cover;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+        transition: transform 0.3s, box-shadow 0.3s;
+        background-color: white;
+    }
+
+    .images img:hover {
+        transform: scale(1.1);
+        box-shadow: 0 8px 15px rgba(0,0,0,0.5);
+    }
+</style>
+</head>
+<body>
+
+<h1>Привет! Это мой сайт-визитка</h1>
+<h2>Тут многое обо мне 👇</h2>
+
+<div class="about-me">
+    <p style="background-color:#FF6F61;">Меня зовут Мирзиед и скоро мне исполнится 14 лет.</p>
+    <p style="background-color:#6B5B95;">Я родился 12 января 2012 года.</p>
+    <p style="background-color:#88B04B;">Сейчас я в 8 "в" классе 103 школы.</p>
+    <p style="background-color:#F7CAC9;">Я был в некоторых странах Ближнего Востока и Центральной Азии — Казахстан🇰🇿, Кыргызстан🇰🇬, ОАЭ🇦🇪, Саудовская Аравия🇸🇦.</p>
+    <p style="background-color:#92A8D1;">Я очень хорошо знаю страны мира и могу перечислить минимум 100 стран🗾.</p>
+    <p style="background-color:#955251;">Довольно хорошо знаю города многих стран.</p>
+    <p style="background-color:#B565A7;">Из истории мне очень нравится история Корейской🇰🇷, Римской🔱 и Японской⛩️🇯🇵 империй.</p>
+    <p style="background-color:#009B77;">В будущем хочу работать в сфере авиации🛩️.</p>
