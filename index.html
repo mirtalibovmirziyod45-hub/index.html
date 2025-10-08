@@ -7,9 +7,9 @@
 <style>
   body {
     font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(270deg, #001F3F, #000000, #220066, #002244);
-    background-size: 800% 800%;
-    animation: gradient 15s ease infinite;
+    background: linear-gradient(270deg, #000000, #001F3F, #220066, #440088, #002244);
+    background-size: 1000% 1000%;
+    animation: gradient 20s ease infinite;
     color: white;
     text-align: center;
     padding: 20px;
@@ -24,8 +24,8 @@
   h1 {
     font-size: 32px;
     color: #00FFFF;
-    text-shadow: 0 0 10px #00FFFF;
-    margin-bottom: 20px;
+    text-shadow: 0 0 15px #00FFFF;
+    margin-bottom: 25px;
     animation: fadeIn 2s ease-in-out;
   }
 
@@ -37,21 +37,8 @@
   }
 
   @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(15px); }
+    from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
-  }
-
-  img {
-    width: 300px;
-    height: auto;
-    border-radius: 15px;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
-    margin: 15px;
-    transition: transform 0.5s;
-  }
-
-  img:hover {
-    transform: scale(1.08);
   }
 </style>
 </head>
@@ -60,14 +47,6 @@
 <h1>Привет, это мой сайт-визитка — тут многое обо мне ✨</h1>
 
 <div id="text"></div>
-
-<div>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Airbus_A380_blue_sky.jpg" alt="Airbus A380">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/The_world_map_blank_without_borders.svg" alt="Карта мира">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Mount_Fuji_and_Chureito_Pagoda.jpg" alt="Япония">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Starsinthesky.jpg" alt="Космос">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Sunset_reflection_lake.jpg" alt="Подходит под характер">
-</div>
 
 <script>
 const facts = [
@@ -98,13 +77,18 @@ const facts = [
 "25. Я очень любознателен и интересуюсь каждой деталью."
 ];
 
-const colors = ["#FF5733","#33FF57","#57C7FF","#FFD633","#B833FF","#FF33A6","#33FFF0","#FF8833","#ADFF2F","#00FFFF","#FF1493","#7FFF00"];
+const colors = [
+"#FF5733","#33FF57","#57C7FF","#FFD633","#B833FF","#FF33A6",
+"#33FFF0","#FF8833","#ADFF2F","#00FFFF","#FF1493","#7FFF00"
+];
 
-const textDiv = document.getElementById("text");facts.forEach((fact, index) => {
+const textDiv = document.getElementById("text");
+
+facts.forEach((fact, index) => {
   const p = document.createElement("p");
   p.innerText = fact;
   p.style.color = colors[index % colors.length];
-  p.style.animationDelay = ${index * 0.5}s;
+  p.style.animationDelay = `${index * 0.5}s`;
   textDiv.appendChild(p);
 });
 </script>
